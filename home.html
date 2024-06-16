@@ -14,22 +14,22 @@
                         <input type="number" name="empCode" id="empCode">
                     </div>
                     <div>
-                        <label for="EmployeeName">Employee Name</label>
-                        <input type="text" name="empName" id="empName">
+                        <label for="EmployeeName">Name</label>
+                        <input type="text" name="empName" id="empName" placeholder="Employee Name">
                     </div>
                     <div>
-                        <label for="Email">Employee Email</label>
-                        <input type="email" name="empEmail" id="empEmail">
+                        <label for="Email">Email-Id</label>
+                        <input type="text" name="empEmail" id="empEmail" placeholder="example@gmail.com">
                     </div>
                     <div>
                         <label for="number">Contact Number</label>
                         <input type="number" name="phone" id="phone">
                     </div>
 
-                    <!--<div>
-                        <label for="Address">Employee Address</label>
-                        <textarea name="" id="address"></textarea>
-                    </div>-->
+                    <div>
+                        <label for="Address">Address</label>
+                        <textarea name="address" id="address"></textarea>
+                    </div>
 
                     <div class="form_action--button">
                         <input type="submit" value="Submit">
@@ -38,13 +38,14 @@
                 </form>
 
                 <td>
-                    <table class="list" id="storeList">
+                    <table class="list" id="empList">
                         <thead>
                             <tr>
-                                <th>Product Code</th>
-                                <th>Product Name</th>
-                                <th>Qty</th>
-                                <th>Price</th>
+                                <th>Employee Id</th>
+                                <th>Employee Name</th>
+                                <th>Email</th>
+                                <th>Contact No.</th>
+                                <th>Address</th>
                             </tr>
                         </thead>
                         <tbody>
