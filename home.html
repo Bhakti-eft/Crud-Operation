@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<head>
+    <title>Crud Operation</title>
+    <link type="text/css" rel="stylesheet" href="home.css"
+</head>
+
+<body>
+    <table>
+        <tr>
+            <td>
+                <form autocomplete="off" onsubmit="onFormSubmit()">
+                    <div>
+                        <label for="EmployeeId">Employee Id</label>
+                        <input type="number" name="empCode" id="empCode">
+                    </div>
+                    <div>
+                        <label for="EmployeeName">Employee Name</label>
+                        <input type="text" name="empName" id="">empName
+                    </div>
+                    <div>
+                        <label for="Email">Employee Email</label>
+                        <input type="email" name="empEmail" id="empEmail">
+                    </div>
+                    <div>
+                        <label for="number">Contact Number</label>
+                        <input type="number" name="phone" id="phone">
+                    </div>
+
+                    <!--<div>
+                        <label for="Address">Employee Address</label>
+                        <textarea name="" id="address"></textarea>
+                    </div>-->
+
+                    <div class="form_action--button">
+                        <input type="submit" value="Submit">
+                        <input type="reset" value="Reset">
+                    </div>
+                </form>
+
+                <td>
+                    <table class="list" id="storeList">
+                        <thead>
+                            <tr>
+                                <th>Product Code</th>
+                                <th>Product Name</th>
+                                <th>Qty</th>
+                                <th>Price</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        </tbody>
+                    </table>
+                </td>
+            </td>
+        </tr>
+    </table>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
