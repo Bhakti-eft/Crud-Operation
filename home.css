@@ -6,9 +6,9 @@ body{
 }
 
 table{
-    width: 80%;
+    width: 95%;
     margin: 40px auto;
-    background: rgb(124,154,167);
+    background: rgb(35, 84, 104);
 }
 
 table.list{
@@ -26,7 +26,7 @@ tr:nth-child(even), table.list thread> tr{
     background-color: rgb(204,200,200);
 }
 
-input[type="text"],input[type="number"]{
+input[type="text"],input[type="number"],textarea{
     width:91%;
     padding:12px 20px;
     margin:8px 0;

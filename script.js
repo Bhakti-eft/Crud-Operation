@@ -38,7 +38,38 @@ function insertNewRecord(data) {
     cell5 = newRow.insertCell(4);
         cell5.innerHTML = data.address;
     cell5= newRow.insertCell(5);
-        cell4.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
+        cell5.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
+
+
+
+  // Save to localStorage
+
+    let records = JSON.parse(localStorage.getItem('records')) || [];
+    records.push(data);
+    localStorage.setItem('records', JSON.stringify(records));
+}
+
+// Function to load records from localStorage
+function loadRecords() {
+    let records = JSON.parse(localStorage.getItem('records')) || [];
+    var table = document.getElementById("empList").getElementsByTagName('tbody')[0];
+    
+    records.forEach(function(data) {
+        var newRow = table.insertRow(table.rows.length);
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+        var cell6 = newRow.insertCell(5);
+        
+        cell1.innerHTML = data.empCode;
+        cell2.innerHTML = data.empName;
+        cell3.innerHTML = data.empEmail;
+        cell4.innerHTML = data.phone;
+        cell5.innerHTML = data.address;
+        cell6.innerHTML = `<button onClick="onEdit(this)">Edit</button> <button onClick="onDelete(this)">Delete</button>`;
+    });
 }
 
 //Edit the data
@@ -57,7 +88,7 @@ function updateRecord(formData) {
     selectedRow.cells[3].innerHTML = formData.phone;
     selectedRow.cells[4].innerHTML = formData.address;
 }
-}
+
 
 //Delete the data
 function onDelete(td) {
